@@ -1,0 +1,315 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+body {
+  background-color: #131313 !important  ;
+}
+
+#Home,
+#About,
+#Menu,
+#Reservation,
+#Contact,
+#Gallery {
+  padding: 80px 0;
+}
+.specialHeading {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  color: #f9f9f9;
+  text-shadow: 0 0 2px white;
+  text-align: center;
+}
+
+.navbar {
+  background-color: #131313;
+  padding: 0 !important;
+}
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  transform: scale(0.8);
+}
+.navbar-brand .logo {
+  display: inline-block;
+  font-size: 35px;
+  padding: 10px 8px;
+}
+.navbar-brand .logo + span {
+  display: inline-block;
+  padding: 10px 8px;
+  line-height: 1;
+}
+.collapse {
+  flex-grow: 0 !important;
+  width: 70%;
+}
+.bookNow {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+.bookNow .btn {
+  min-width: 12rem;
+}
+.nav-link:hover:not(.active) {
+  text-shadow: 0 0 12px rgb(210, 210, 210, 0.8);
+  color: white !important;
+}
+.back {
+  position: relative;
+  background-image: url("../Assets/Back-min1.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 75vh;
+}
+/* .back::before {
+  content: "";
+  position: absolute;
+} */
+.introtext {
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, 0%);
+}
+.introtext h1,
+.introtext p {
+  color: #ffffff;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.781);
+  transition: all 0.3s;
+}
+.introtext h1 {
+  font-size: 2.3rem;
+}
+.introtext p {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+}
+@media screen and (max-width: 330px) {
+  .introtext h1 {
+    display: none;
+  }
+}
+@media screen and (max-width: 770px), (max-height: 490px) {
+  .introtext h1 {
+    transform: scale(0.8);
+  }
+  .introtext p {
+    display: none;
+  }
+}
+.sliders {
+  width: 130px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.sliders:hover {
+  cursor: pointer;
+}
+.sliders span:not(:nth-child(1)):hover {
+  background-color: rgb(219, 219, 219);
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.771);
+}
+.sliders span {
+  display: block;
+  width: 30px;
+  margin-right: 9px;
+  height: 3px;
+}
+.back span:nth-child(1) {
+  background-color: white;
+}
+.back span:nth-child(2) {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.back span:nth-child(3) {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+@media screen and (max-height: 600px) {
+  .sliders {
+    display: none;
+  }
+}
+
+form {
+  padding: 30px 0;
+  align-items: center;
+}
+form input,
+form select {
+  margin: 0 1rem;
+}
+@media screen and (max-width: 991px) {
+  form {
+    flex-wrap: wrap;
+  }
+  form input,
+  form select {
+    margin: 0.4rem 1rem;
+  }
+}
+
+.workHours {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-gap: 30px;
+  align-items: center;
+  padding-top: 60px;
+}
+.workHours .slice {
+  text-align: center;
+}
+.slice section {
+  margin: 40px 0;
+}
+section label {
+  display: block;
+}
+.slice .img {
+  background-image: url("../Assets/bar-min.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 65vh;
+}
+.slice h6 {
+  cursor: pointer;
+  color: white;
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.821);
+}
+@media screen and (max-width: 1200px) {
+  .imageSlice,
+  .slice .img {
+    display: none;
+  }
+}
+
+.info {
+  padding-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.info img {
+  max-width: 400px;
+  margin: 40px;
+  margin-top: 0;
+}
+.info .sidetext {
+  flex-basis: calc(100% - 500px);
+  text-align: center;
+}
+.info .sidetext p {
+  color: white;
+  font-size: 18px;
+  line-height: 1.8;
+  letter-spacing: 1.7px;
+  text-align: left;
+  /* padding-bottom: 40px; */
+}
+.info .sidetext p span {
+  display: block;
+  font-size: 26px;
+  font-weight: 500;
+  font-family: serif;
+  text-align: center;
+  /* padding: 10px;
+  padding-top: 0; */
+}
+@media screen and (max-width: 1219px) {
+  .info img {
+    display: none;
+  }
+  .info {
+    display: block;
+    padding: 60px 0;
+  }
+}
+
+.recommend {
+  padding: 40px 0;
+  color: white;
+  font-family: serif;
+  align-items: center;
+  text-align: center;
+}
+.recommend .dishes {
+  padding: 80px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* gap: 30px;     --> didnt work*/
+  align-items: center;
+  text-align: left;
+  color: aliceblue;
+}
+.recommend .dishes .sidetext {
+  flex-basis: calc(100% - 700px);
+}
+.sidetext .type {
+  margin: 40px 0;
+}
+.sidetext .type p {
+  position: relative;
+  margin: 0;
+}
+.sidetext .type p .price {
+  position: absolute;
+  right: 0;
+  font-weight: 100;
+}
+hr.dotted {
+  margin-top: 1px;
+  border-top: 2.5px dotted rgb(255, 255, 255);
+  background-color: transparent;
+}
+.recommend .dishes img {
+  width: 500px;
+}
+@media screen and (max-width: 1200px) {
+  .recommend .dishes img {
+    display: none;
+  }
+  .recommend .dishes {
+    display: block;
+  }
+}
+
+.attractions {
+  padding: 100px;
+}
+.toptext {
+  text-align: center;
+  color: white;
+  font-family: serif;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-gap: 30px;
+  padding: 40px 0;
+  transform: scale(0.9);
+}
+.card {
+  background-color: #6c6c6c !important;
+  align-items: center;
+}
+.card label {
+  padding: 3px;
+  color: #ffffff;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+}
