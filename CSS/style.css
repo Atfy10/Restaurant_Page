@@ -37,6 +37,11 @@ body {
     min-width: 50%;
   }
 }
+.stars i {
+  display: inline;
+  color: rgb(141, 141, 0);
+  font-size: x-large;
+}
 /* End General Styles */
 
 #Home,
@@ -345,7 +350,7 @@ hr.dotted {
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   grid-gap: 30px;
   padding: 40px 0 10px 0;
-  transform: scale(0.9);
+  /* transform: scale(0.9); */
 }
 .card {
   background-color: #6c6c6c !important;
@@ -374,10 +379,106 @@ hr.dotted {
   }
 }
 
+.chef {
+  padding: 40px 0;
+}
 .chef .cards .card {
   background-color: transparent !important;
   color: aliceblue;
 }
 .chef .cards .card .card-img-top {
   padding: 10px 0 25px 0;
+}
+
+.todaySelection {
+  padding: 40px 0;
+}
+.todaySelection .todaysDishes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0.7);
+  /* display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 30px; */
+}
+.todaySelection .todaysDishes .dish {
+  width: 28%;
+  margin: 5px 20px;
+  color: #f9f9f9;
+}
+.todaySelection .todaysDishes .dish img {
+  width: 100%;
+}
+.todaySelection .todaysDishes .dish label {
+  font-size: 20px;
+}
+.todaySelection .todaysDishes .dish i {
+  margin-right: 7px;
+  font-size: x-large;
+}
+.todaySelection .todaysDishes .dish .stars {
+  display: block;
+  margin: 1rem 0;
+}
+.todaySelection .todaysDishes .dish .stars h4 {
+  display: inline;
+  font-size: large;
+}
+
+@media screen and (max-width: 991px) {
+  .todaySelection .todaysDishes {
+    transform: scale(1);
+  }
+  .todaySelection .todaysDishes .dish .stars h4 {
+    display: none;
+  }
+}
+@media screen and (max-width: 767.7px) {
+  .todaySelection .todaysDishes {
+    flex-direction: column;
+    width: 100%;
+    margin: 15px 20px;
+  }
+  .todaySelection .todaysDishes .dish .stars i {
+    font-size: 14px;
+    margin: 0;
+  }
+  .todaySelection .todaysDishes .dish i {
+    font-size: 14px;
+  }
+  .todaySelection .todaysDishes .dish label {
+    font-size: 16px;
+  }
+}
+
+.testimonials {
+  padding: 40px;
+}
+.reviews {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+}
+.reviews .review {
+  color: #f9f9f9;
+  border: 2px solid rgba(255, 255, 255, 0.705);
+  border-radius: 4px;
+  margin: 10px 30px;
+  padding: 10px;
+  text-align: center;
+}
+.review p {
+  margin-top: 10px;
+}
+.review .stars {
+  margin-top: 25px;
+  text-align: center;
+}
+@media screen and (max-width: 991px) {
+  .reviews {
+    flex-direction: column;
+  }
 }
