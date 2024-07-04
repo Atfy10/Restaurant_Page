@@ -15,7 +15,7 @@ body {
   font-family: "Merriweather", serif;
   font-weight: 700;
   color: #f9f9f9;
-  text-shadow: 0 0 2px white;
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.834);
   text-align: center;
 }
 .specialHeading1 {
@@ -42,6 +42,11 @@ body {
   color: rgb(141, 141, 0);
   font-size: x-large;
 }
+.button {
+  text-align: center;
+  align-items: center;
+  width: 100%;
+}
 /* End General Styles */
 
 #Home,
@@ -57,20 +62,27 @@ body {
   background-color: #131313;
   padding: 0 !important;
 }
-.navbar-brand {
-  display: flex;
-  align-items: center;
-  transform: scale(0.8);
-}
 .navbar-brand .logo {
-  display: inline-block;
-  font-size: 35px;
-  padding: 10px 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 8px;
 }
-.navbar-brand .logo + span {
+.navbar-brand .logoIcon {
   display: inline-block;
-  padding: 10px 8px;
+  align-items: center;
+  align-content: center;
+  font-size: 35px;
+}
+.logoIcon i {
+  font-size: 25px;
+  height: fit-content;
+}
+.navbar-brand .logoIcon + span {
+  display: inline-block;
+  padding: 0px 8px;
   line-height: 1;
+  font-size: 16px;
 }
 .collapse {
   flex-grow: 0 !important;
@@ -480,5 +492,75 @@ hr.dotted {
 @media screen and (max-width: 991px) {
   .reviews {
     flex-direction: column;
+  }
+}
+
+.menu {
+  padding: 40px 0;
+}
+.menuBack {
+  background-image: url("/Assets/menuBack-c.jpg");
+  background-size: cover;
+  background-position: top;
+  height: 35vh;
+  position: relative;
+  margin-bottom: 80px;
+}
+.menuBack h1 {
+  position: absolute;
+  text-align: center;
+
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.menu .food {
+  display: flex;
+  flex-direction: column;
+  color: aliceblue;
+}
+.food .country {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: left;
+  align-items: center;
+  text-align: left;
+  font-family: serif;
+  margin: 40px 0;
+}
+.food .country .sidetext {
+  flex-basis: calc(100% - 700px);
+}
+.food .country .sidetext h3 {
+  text-align: center;
+}
+.food .country .sidetext .foodName p {
+  position: relative;
+  margin: 0;
+}
+.food .country .sidetext .foodName p .price {
+  position: absolute;
+  right: 0;
+  font-weight: 100;
+}
+.food .country img {
+  max-width: 50%;
+}
+@media screen and (max-width: 1199px) {
+  .menuBack {
+    height: 15vh;
+  }
+  .food .country img {
+    display: none;
+  }
+  .food .country {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+  }
+  .food .country .sidetext {
+    width: 100%;
   }
 }
