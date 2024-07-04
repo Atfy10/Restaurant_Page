@@ -499,7 +499,7 @@ hr.dotted {
   padding: 40px 0;
 }
 .menuBack {
-  background-image: url("/Assets/menuBack-c.jpg");
+  background-image: url("../Assets/menuBack-c.jpg");
   background-size: cover;
   background-position: top;
   height: 35vh;
