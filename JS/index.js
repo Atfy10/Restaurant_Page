@@ -58,15 +58,15 @@ weather.innerText = "The weather now is clean";
 let todayDate = new Date();
 let hour = todayDate.getHours();
 if (hour >= 6 && hour < 17) {
-  backImage.style.backgroundImage = `url("../Assets/Back-min3.jpg")`;
+  backImage.style.backgroundImage = `url("../../Assets/Back-min3.jpg")`;
   left.checked = true;
   greeting.innerText = "Good Morning!";
 } else if (hour >= 17 && hour < 20) {
-  backImage.style.backgroundImage = `url("../Assets/Back-min1.jpg")`;
+  backImage.style.backgroundImage = `url("../../Assets/Back-min1.jpg")`;
   mid.checked = true;
   greeting.innerText = "Good Afternoon!";
 } else if ((hour >= 20 && hour < 24) || (hour >= 0 && hour < 6)) {
-  backImage.style.backgroundImage = `url("../Assets/Back-min4.jpg")`;
+  backImage.style.backgroundImage = `url("../../Assets/Back-min4.jpg")`;
   right.checked = true;
   greeting.innerText = "Good Night!";
 }
