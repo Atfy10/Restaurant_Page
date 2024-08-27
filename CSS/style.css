@@ -118,7 +118,7 @@ body {
 
 .back {
   position: relative;
-  background-image: url("../Assets/Back-min1.jpg");
+  background-image: url("./Assets/Back-min1.jpg");
   background-size: cover;
   background-position: center;
   height: 75vh;
