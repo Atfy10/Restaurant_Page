@@ -11,7 +11,17 @@ const weather = document.getElementById("weather");
 const personNumber = document.getElementById("personNo");
 const bookDate = document.getElementById("book-date");
 const bookTime = document.getElementById("book-time");
+const foodMenu = document.getElementById("food-menu");
+const foodMenus = document.getElementsByClassName("country");
+const allBtn = document.getElementById("all");
+const indianBtn = document.getElementById("Ind");
+const italianBtn = document.getElementById("It");
+const mexicanBtn = document.getElementById("Mex");
 const selectError = document.getElementById("error");
+const foodMenuArray = [];
+for (let i = 0; i < foodMenus.length; i++) {
+  foodMenuArray[i] = foodMenus[i];
+}
 //#endregion
 
 //#region Active NavIem
@@ -35,11 +45,11 @@ window.addEventListener("scroll", () => {
   let contactHeight = contact.clientHeight;
   if (window.scrollY <= homeTop + homeHeight) {
     current = home.getAttribute("id");
-  } else if (window.scrollY <= aboutTop + aboutHeight) {
+  } else if (window.scrollY <= aboutTop + aboutHeight - 2) {
     current = about.getAttribute("id");
-  } else if (window.scrollY <= menuTop + menuHeight) {
+  } else if (window.scrollY <= menuTop + menuHeight - 2) {
     current = menu.getAttribute("id");
-  } else if (window.scrollY <= contactTop + contactHeight) {
+  } else if (window.scrollY <= contactTop + contactHeight - 2) {
     current = contact.getAttribute("id");
   }
 
@@ -53,20 +63,49 @@ window.addEventListener("scroll", () => {
 
 //#endregion
 
+//#region Select Menu
+allBtn.addEventListener("click", () => {
+  foodMenu.replaceChildren("");
+  for (let i = 0; i < foodMenuArray.length; i++) {
+    foodMenu.appendChild(foodMenuArray[i]);
+  }
+});
+indianBtn.addEventListener("click", () => {
+  foodMenu.replaceChildren("");
+  for (let i = 0; i < foodMenuArray.length; i++) {
+    if (foodMenuArray[i].id == "indian") foodMenu.appendChild(foodMenuArray[i]);
+  }
+});
+italianBtn.addEventListener("click", () => {
+  foodMenu.replaceChildren("");
+  for (let i = 0; i < foodMenuArray.length; i++) {
+    if (foodMenuArray[i].id == "italian")
+      foodMenu.appendChild(foodMenuArray[i]);
+  }
+});
+mexicanBtn.addEventListener("click", () => {
+  foodMenu.replaceChildren("");
+  for (let i = 0; i < foodMenuArray.length; i++) {
+    if (foodMenuArray[i].id == "mexican")
+      foodMenu.appendChild(foodMenuArray[i]);
+  }
+});
+//#endregion
+
 //#region Time & Greeting Message
 weather.innerText = "The weather now is clean";
 let todayDate = new Date();
 let hour = todayDate.getHours();
 if (hour >= 6 && hour < 17) {
-  backImage.style.backgroundImage = `url("../../Assets/Back-min3.jpg")`;
+  backImage.style.backgroundImage = `url("../Assets/Back-min3.jpg")`;
   left.checked = true;
   greeting.innerText = "Good Morning!";
 } else if (hour >= 17 && hour < 20) {
-  backImage.style.backgroundImage = `url("../../Assets/Back-min1.jpg")`;
+  backImage.style.backgroundImage = `url("../Assets/Back-min1.jpg")`;
   mid.checked = true;
   greeting.innerText = "Good Afternoon!";
 } else if ((hour >= 20 && hour < 24) || (hour >= 0 && hour < 6)) {
-  backImage.style.backgroundImage = `url("../../Assets/Back-min4.jpg")`;
+  backImage.style.backgroundImage = `url("../Assets/Back-min4.jpg")`;
   right.checked = true;
   greeting.innerText = "Good Night!";
 }

@@ -246,15 +246,11 @@ body {
 }
 #Home form input,
 #Home form select {
-  margin: 0 1rem;
+  margin: 0.3rem 1rem;
 }
 @media screen and (max-width: 991px) {
   form {
     flex-wrap: wrap;
-  }
-  form input,
-  form select {
-    margin: 0.4rem 1rem;
   }
 }
 
@@ -547,10 +543,50 @@ hr.dotted {
 .menuBack h1 {
   position: absolute;
   text-align: center;
-
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+#menu-filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 20px 0;
+}
+#menu-filter input[type="radio"] {
+  position: absolute;
+  visibility: hidden;
+  display: none;
+}
+#menu-filter input[id="all"]:checked ~ .glider {
+  transform: translateX(-150%);
+}
+#menu-filter input[id="Ind"]:checked ~ .glider {
+  transform: translateX(-50%);
+}
+#menu-filter input[id="It"]:checked ~ .glider {
+  transform: translateX(50%);
+}
+#menu-filter input[id="Mex"]:checked ~ .glider {
+  transform: translateX(150%);
+}
+#menu-filter label {
+  width: calc(100% / 4);
+  cursor: pointer;
+  text-align: center;
+  color: #f9f9f9;
+  font-weight: 600;
+  font-size: 22px;
+}
+#menu-filter .glider {
+  width: calc(100% / 4);
+  height: 3px;
+  position: absolute;
+  bottom: 10px;
+  z-index: 1;
+  transition: 0.25s ease-out;
+  background-color: #f9f9f9;
 }
 .menu .food {
   display: flex;
